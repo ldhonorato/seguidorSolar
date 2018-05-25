@@ -1,11 +1,13 @@
 # Seguidor Solar
-Projeto de Firmware para um seguidor solar para painel fotovoltaico. O projeto é parte do mestrado do Prof. MSc Baldoíno Sonildo da Nóbrega.
+Projeto de Firmware para um seguidor solar para painel fotovoltaico. O projeto é parte do mestrado do [Prof. MSc Baldoíno Sonildo da Nóbrega](http://lattes.cnpq.br/6474706000993108)
 
 ## Descrição do funciomaneto
 O seguidor solar tem o objetivo de alterar a posição do painel solar durante o dia, seguindo a trajetória do sol. De forma resumida, o sistema se comporta da seguinte forma:
 * Com o nascer do sol, por volta das 6h - irradiação suficiente para gerar energia, o painel solar é posicionado em 45° em relação ao solo.
 * Ao longo do dia, o painel vai variando a posição em x°/h.
-* A partir das 17h, com irradiação mínima, o painel solar é posicionado em posição de descanso.
+* A partir das 17h, com irradiação mínima, o painel solar é deslocado para posição de descanso.
+
+Além disso, a cada x minutos, a temperatura do painel e a luminosidade sobre o mesmo são armazenadas em um SD card.
 
 ## Hardware utilizado
 * Arduino Mega 2560
