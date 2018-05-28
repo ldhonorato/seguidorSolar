@@ -12,11 +12,26 @@ Além disso, a cada x minutos, a temperatura do painel e a luminosidade sobre o 
 ## Hardware utilizado
 * Arduino Mega 2560
 * Motor de passo ak23 15f6fn1.8
-* Driver para motor de passo bl-tb6560-v2.0
+* Driver para motor de passo BL-TB6560-v2.0
 * RTC DS3231
 * Termopar MAX6675
 * Sensor luminosidade (?)
 * Módulo SD Card
+
+### Configuração das chaves do BL-TB6560-v2.0
+* Running Current - 3A
+  * SW1 - ON
+  * SW2 - ON
+  * SW3 - ON
+  * S1 - OFF
+* Stop Current - 50%
+  * S2 - ON
+* Excitation Mode - whole
+  * S3 - OFF
+  * S4 - OFF
+* Decay Setting - 0%
+  * S5 - OFF
+  * S6 - OFF
 
 ## Bibliotecas Utilizadas
 * Biblioteca DS32231
