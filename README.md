@@ -37,3 +37,27 @@ Além disso, a cada x minutos, a temperatura do painel e a luminosidade sobre o 
 * Biblioteca DS32231
 * Biblioteca MAX6675
 * Biblioteca SD
+* [TimeLib](https://github.com/PaulStoffregen/Time)
+* [TimeAlarms](https://github.com/PaulStoffregen/TimeAlarms)
+* [CLI](https://github.com/PaulStoffregen/Time)
+
+## Terminal serial
+Utilizando a *Command Line stream interface for Arduino* (CLI), podem ser enviados os seguintes comandos pela porta serial:
+* motor (sentido) (n de passos) - comando para operar o motor de passo que movimenta o painel
+  * (sentido) - sentido de rotação do motor. Se igual a 0 (zero) o motor roda no sentido horário. Se diferente de 0 (zero) o motor roda em sentido anti-horário.
+  * (n de passos) - número de passos a serem executados.
+* levantar - partindo da posicao de descanso, traz o painel para posição inicial.
+* descansar - partindo da posicao do final do dia, retorna o painel para posição de descanso.
+* avancar - avanca o painel em x°.
+* ler - imprime a leitura do fotodiodo e do termopar.
+* rtc (dia) (mes) (ano) (hora) (minuto) (segundo) - ajusta os dados d RTC ou imprime a hora armazenada (caso nao tenha parametros).
+* time - imprime a hora da TimeLib.
+
+## Arquivos de Log
+O sistema gera dois arquivos de Log, armazenados no SD Card:
+### datalog.cvs 
+Arquivo CSV, com o seguinte *header*:
+* dia, mês, ano, hora, minuto, segundo, temperatura, fotodiodo
+Estes dados são armazenados a cada 60 segundos.
+### systemLog.log
+Arquivo texto com todas as operações realizadas pelo firware.
