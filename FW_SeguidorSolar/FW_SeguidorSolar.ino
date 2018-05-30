@@ -158,9 +158,9 @@ CLI_COMMAND(HoraTimeFunc)
 CLI_COMMAND(helpFunc) {
     dev->println("Comando disponiveis:");
     dev->println("motor <sentido> <n de passos> - sentido: 0-horario 1-anti-horario.");
-    dev->println("levantar - partindo da posicao de descanso, traz o painel para posisao de 6h.");
-    dev->println("descansar - partindo da posicao de 17h, retorna o painel para posicao de descanso.");
-    dev->println("avancar - realiza o deslocamento que o painel realiza a cada hora.");
+    dev->println("levantar - partindo da posicao de descanso, traz o painel para posicao inicial.");
+    dev->println("descansar - partindo da posicao do final do dia, retorna o painel para posicao de descanso.");
+    dev->println("avancar - avanca o painel em x graus.");
     dev->println("ler - imprime a leitura do fotodiodo e do termopar.");
     dev->println("rtc <dia> <mes> <ano> <hora> <minuto> <segundo> - ajusta os dados d RTC ou imprime a hora armazenada (caso nao tenha parametros).");
     dev->println("time - imprime a hora da TimeLib.");
