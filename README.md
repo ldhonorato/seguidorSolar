@@ -43,13 +43,14 @@ Além disso, a cada x minutos, a temperatura do painel e a luminosidade sobre o 
 
 ## Terminal serial
 Utilizando a *Command Line stream interface for Arduino* (CLI), podem ser enviados os seguintes comandos pela porta serial:
-* motor <sentido> <n de passos> - comando para operar o motor de passo que movimenta o painel
-  *<sentido> - sentido de rotação do motor. Se igual a 0 (zero) o motor roda no sentido horário. Se diferente de 0 (zero) o motor roda em sentido anti-horário.
+* motor (sentido) (n de passos) - comando para operar o motor de passo que movimenta o painel
+  * (sentido) - sentido de rotação do motor. Se igual a 0 (zero) o motor roda no sentido horário. Se diferente de 0 (zero) o motor roda em sentido anti-horário.
+  * (n de passos) - número de passos a serem executados.
 * levantar - partindo da posicao de descanso, traz o painel para posição inicial.
 * descansar - partindo da posicao do final do dia, retorna o painel para posição de descanso.
-* avancar - avanca o painel e x°.
+* avancar - avanca o painel em x°.
 * ler - imprime a leitura do fotodiodo e do termopar.
-* rtc <dia> <mes> <ano> <hora> <minuto> <segundo> - ajusta os dados d RTC ou imprime a hora armazenada (caso nao tenha parametros).
+* rtc (dia) (mes) (ano) (hora) (minuto) (segundo) - ajusta os dados d RTC ou imprime a hora armazenada (caso nao tenha parametros).
 * time - imprime a hora da TimeLib.
 
 ## Arquivos de Log
